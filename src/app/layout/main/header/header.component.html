@@ -71,6 +71,22 @@
             </a>
 
         </div>
+        <!-- Inventario -->
+        <div *ngIf="(userLab=='lauto')" class="mb-5 ">
+            <div class="d-flex align-items-top justify-content-between ">
+                <span class="text-white fs-5 mb-4 ">Inventario</span>
+                <i class="bi bi-boxes fs-5 text-white "></i>
+            </div>
+            <a href="/inventory/equipment ">
+                <p class="text-white fs-6 text-border ">Equipo</p>
+            </a>
+            <a href="/inventory/loans ">
+                <p class="text-white fs-6 text-border ">Prestamo de equipo</p>
+            </a>
+            <a *ngIf="userRole==' admin ' || userRole=='superuser' " href="/inventory/records ">
+                <p class="text-white fs-6 text-border ">Historial de prestamos</p>
+            </a>
+        </div>
         <!-- Datos -->
         <div *ngIf="userRole == 'superuser'" class="mb-5">
             <div class="d-flex align-items-top justify-content-between">
@@ -84,5 +100,6 @@
                 <p class="text-white fs-6 text-border">Usuarios</p>
             </a>
         </div>
+
     </div>
 </ng-template>

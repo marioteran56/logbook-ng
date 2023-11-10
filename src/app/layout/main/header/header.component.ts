@@ -14,6 +14,7 @@ export class HeaderComponent {
 	public windowWidth: any = window.innerWidth;
 	public user: any;
 	public userRole: string = '';
+	public userLab: string = '';
 
 	constructor(private offcanvasService: NgbOffcanvas, private router: Router) {}
 
@@ -22,6 +23,7 @@ export class HeaderComponent {
         if (this.user) {
 			this.user = JSON.parse(this.user);
 			this.userRole = String(this.user.user.role).toLowerCase();
+			this.userLab = String(this.user.user.lab).toLowerCase();
 		}
 	}
 

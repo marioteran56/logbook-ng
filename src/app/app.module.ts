@@ -40,6 +40,9 @@ import { SocialServiceReportsComponent } from './components/reports/social-servi
 import { TabViewModule } from 'primeng/tabview';
 import { AssistanshipsModule} from './components/assistanships/assistanships-service.module'
 import { AssistanshipsReportsComponent } from './components/reports/assistanships-reports/assistanships-reports.component';
+import { EquipmentComponent } from './components/inventory/equipment/equipment.component';
+import { LoansComponent } from './components/inventory/loans/loans.component';
+import { RecordsComponent } from './components/inventory/records/records.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +63,9 @@ import { AssistanshipsReportsComponent } from './components/reports/assistanship
     InventoryComponent,
     SocialServiceReportsComponent,
     AssistanshipsReportsComponent,
+    EquipmentComponent,
+    LoansComponent,
+    RecordsComponent,
   ],
   imports: [
     BrowserAnimationsModule,
