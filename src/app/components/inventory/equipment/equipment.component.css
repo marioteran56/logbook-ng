@@ -1,0 +1,85 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5%;
+}
+
+.card-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carta-box {
+    margin: 25px;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+
+.carta {
+    transform-style: preserve-3d;
+    transition: transform 0.5s linear;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.cara h5 {
+    text-align: center;
+}
+
+.cara.detras {
+    transform: rotateY(180deg);
+    height: 200px;
+    width: 200px;
+    outline-style: solid;
+}
+
+.carta-box.flipped .carta {
+    transform: rotateY(180deg);
+}
+
+.card {
+    background: var(--surface-card);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: rgba(255, 191, 0, 0.384);
+    border: none;
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-field {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.search-button {
+    flex: none;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.btn-primary:hover {
+    background-color: rgb(16, 58, 109);
+    color: white;
+    border-color: rgb(16, 58, 109);
+}

@@ -1,6 +1,32 @@
-<div class="h-100 w-100 p-5">
-    <div class="d-flex flex-column align-items-center justify-content-between mb-5">
-        <img class="mt-5" alt="Construction vector" src="assets/images/construction_vector.png" style="width: 35rem;">
-        <span class="fs-5 mt-3">Equipo perron</span>
+<div class="card-container2" style="margin-right: 5%;">
+    <div class="card flex justify-content-center">
+        <p-card header="Title" class="m-0">
+            <h6 class="m-0 ">
+                *Nota: Puedes voltear la tarjeta dando click en ella*
+            </h6>
+        </p-card>
     </div>
+    <div class="flex justify-content-center">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar equipo" class="m-0 rounded input-field" [(ngModel)]="searchTerm" (keyup.enter)="searchCards()">
+            <button class="btn btn-primary search-button" (click)="searchCards()">Buscar</button>
+        </div>
+    </div>
+</div>
+
+<!-- En el css esta implementado una cara de atras, y en el TS la funcion para cuando se la hace click
+     si quieres agregar una descripcion, solo agrega otro div con class="cara-detras", descomenta la funcion de TS
+     y agrega las variables a cada equipo -->
+
+<div class="card-container">
+    <ng-container *ngFor="let card of cards; let i=index">
+        <div class="carta-box" [hidden]="card.isHidden">
+            <div class="carta">
+                <div class="cara">
+                    <img [src]="card.frontImage" width="200" height="200px">
+                    <h5>{{ card.name }}</h5>
+                </div>
+            </div>
+        </div>
+    </ng-container>
 </div>
